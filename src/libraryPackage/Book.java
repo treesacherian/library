@@ -26,7 +26,7 @@ public class Book extends LibraryItem {
 
 	@Override
 	public String toString() {
-		return "Book author=" + author + ", Book Name=" + getLibItemName() + ", ItemId=" + getItemId() + "\n ";
+		return "Book ItemId: " + getItemId() + "  Book Name=" + getLibItemName() + " Author: " + author + "\n ";
 	}
 
 	public void addBook(String name, String author) {

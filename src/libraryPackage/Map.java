@@ -15,7 +15,7 @@ public class Map extends LibraryItem {
 
 	@Override
 	public String toString() {
-		return "Map placeName=" + placeName + ", ItemName()=" + getLibItemName() + ", ItemId=" + getItemId() + "\n";
+		return "Map ItemId: " + getItemId() + " ItemName:" + getLibItemName() + " PlaceName=" + placeName + "\n";
 	}
 
 	public String getPlaceName() {

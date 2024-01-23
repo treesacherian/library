@@ -24,13 +24,14 @@ public class Magazine extends LibraryItem {
 	@Override
 
 	public String toString() {
-		return "Magazine Name =" + getLibItemName() + "Magazine frequency=" + getFrequency() + ", ItemId=" + getItemId()
-				+ "\n";
+		return "Magazine ItemId: " + getItemId() + " Name :" + getLibItemName() + "  Magazine frequency: "
+				+ getFrequency() + "\n";
 	}
 
 	@Override
 	public void returnDue() {
-		System.out.print("2 weeks");
+		System.out.print(" 2 weeks");
+
 	}
 
 }

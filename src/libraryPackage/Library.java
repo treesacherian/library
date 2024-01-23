@@ -60,7 +60,7 @@ public class Library {
 		for (LibraryItem item : items) {
 
 			if (id == item.getItemId()) {
-				System.out.print(" Below item has been successfully checked out" + item + " It is due in ");
+				System.out.print(" Below item has been successfully checked out:\n" + item + " It is due in ");
 				item.returnDue();
 				this.items.remove(item);
 				return;
@@ -81,6 +81,7 @@ public class Library {
 	public void removeMemberById(int id) {
 		for (Member member : members) {
 			if (id == member.getId()) {
+				System.out.print(" Below member has been successfully removed :\n" + member);
 				this.members.remove(member);
 				return;
 			}
@@ -89,7 +90,7 @@ public class Library {
 
 	@Override
 	public String toString() {
-		return "Library [name=" + name + "\n items available in the library " + this.items.size() + "\n" + items + "\n"
+		return "Library name=" + name + "\n items available in the library " + this.items.size() + "\n" + items + "\n"
 				+ "Members registered in the library: " + this.members.size() + "\n" + members;
 	}
 
@@ -109,8 +110,20 @@ public class Library {
 	}
 
 	public void removeItem(LibraryItem item) {
+		System.out.println(item + " has been removed");
 		items.remove(item);
 
+	}
+
+	public void updateItem(int id, String name) {
+		for (LibraryItem i : items) {
+
+			if (i.getItemId() == id) {
+				i.setLibItemName(name);
+				return;
+			}
+
+		}
 	}
 
 }

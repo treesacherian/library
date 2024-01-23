@@ -1,6 +1,6 @@
 package libraryPackage;
 
-public abstract class LibraryItem implements Comparable<LibraryItem>, ReturnDuration {
+public abstract class LibraryItem implements Comparable<LibraryItem> {
 
 	private String libItemName;
 	private int itemId;
@@ -16,6 +16,8 @@ public abstract class LibraryItem implements Comparable<LibraryItem>, ReturnDura
 		setItemId(count++);
 		setLibItemName(libItemName);
 	}
+
+	public abstract void returnDue();
 
 	@Override
 	public String toString() {
@@ -50,8 +52,14 @@ public abstract class LibraryItem implements Comparable<LibraryItem>, ReturnDura
 	public int compareTo(LibraryItem o) {
 
 //comparing a string fields
-		return this.libItemName.compareTo(o.libItemName) * -1;
+		return o.libItemName.compareTo(this.libItemName) * -1;
 
 	}
 
+//	public void update(int id, String name) {
+//		if (id == itemId) {
+//			setLibItemName(name);
+//
+//		}
+//	}
 }

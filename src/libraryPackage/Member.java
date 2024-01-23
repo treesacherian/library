@@ -27,8 +27,8 @@ public class Member implements Comparable<Member> {
 
 	@Override
 	public String toString() {
-		return "Member Name=" + memberName + ",Member id=" + id + ", contactNumber=" + contactNumber + ", address="
-				+ address + "\n";
+		return "Member id=" + id + " Name=" + memberName + ", contactNumber=" + contactNumber + ", address=" + address
+				+ "\n";
 	}
 
 	public void setAddress(String address) {
